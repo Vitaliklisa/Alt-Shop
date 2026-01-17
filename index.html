@@ -8,10 +8,9 @@
     <style>
         /* Y2K COLOR PALETTE */
         :root {
-            --y2k-pink: #ff00ff;
-            --y2k-blue: #00ffff;
+            --y2k-pink: #fc0fc0;
+            --y2k-blue: #4169e1;
             --y2k-purple: #9900ff;
-            --y2k-green: #00ff00;
             --y2k-black: #000022;
             --y2k-silver: #cccccc;
             --y2k-gray: #333344;
@@ -95,7 +94,7 @@
         .logo {
             font-family: 'Impact', 'Arial Black', sans-serif;
             font-size: 2.5rem;
-            background: linear-gradient(to right, var(--y2k-pink), var(--y2k-blue));
+            background: linear-gradient(130deg,rgba(252, 15, 192, 1) 10%, rgb(65, 105, 225, 1) 46%);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
@@ -104,8 +103,7 @@
         }
         
         .logo span {
-            color: var(--y2k-green);
-            text-shadow: 0 0 10px var(--y2k-green);
+            color: var(--y2k-purple);
         }
         
         /* Y2K-STYLE NAVIGATION */
@@ -151,7 +149,7 @@
             border-radius: 5px;
             font-family: 'Courier New', monospace;
             font-size: 0.9rem;
-            color: var(--y2k-green);
+            color: var(--y2k-blue);
             display: flex;
             align-items: center;
             gap: 8px;
@@ -166,7 +164,7 @@
             padding: 60px 30px;
             text-align: center;
             background-image: 
-                url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="none" stroke="%239900ff" stroke-width="2" opacity="0.3"/><circle cx="50" cy="50" r="30" fill="none" stroke="%2300ffff" stroke-width="2" opacity="0.3"/></svg>');
+                url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="none" stroke="%239900ff" stroke-width="2" opacity="0.3"/><circle cx="50" cy="50" r="30" fill="none" stroke="%234169e1" stroke-width="2" opacity="0.3"/></svg>');
             border-top: 1px dashed var(--y2k-blue);
             border-bottom: 1px dashed var(--y2k-pink);
             margin: 20px 0;
@@ -204,14 +202,14 @@
             border: none;
             cursor: pointer;
             transition: all 0.3s;
-            box-shadow: 0 5px 15px rgba(255, 0, 255, 0.4);
+            box-shadow: 0 5px 15px rgba(252, 15, 192, 0.4);
             position: relative;
             overflow: hidden;
         }
         
         .cta-button:hover {
             transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(255, 0, 255, 0.6);
+            box-shadow: 0 8px 20px rgba(252, 15, 192, 0.6);
             background: linear-gradient(45deg, var(--y2k-purple), var(--y2k-pink));
         }
         
@@ -232,8 +230,8 @@
             text-align: center;
             font-size: 2.5rem;
             margin: 40px 0 30px;
-            color: var(--y2k-green);
-            text-shadow: 0 0 10px var(--y2k-green);
+            color: var(--y2k-pink);
+            text-shadow: 0 0 10px var(--y2k-pink);
             position: relative;
         }
         
@@ -274,7 +272,7 @@
         .product-card:hover {
             transform: translateY(-10px);
             border-color: var(--y2k-pink);
-            box-shadow: 0 10px 20px rgba(255, 0, 255, 0.2);
+            box-shadow: 0 10px 20px rgba(252, 15, 192, 0.2);
         }
         
         .product-image {
@@ -334,7 +332,7 @@
         }
         
         .product-price {
-            color: var(--y2k-green);
+            color: var(--y2k-pink);
             font-weight: bold;
             font-size: 1.4rem;
             margin-bottom: 15px;
@@ -401,7 +399,7 @@
         .guestbook-entry {
             background-color: rgba(40, 40, 60, 0.7);
             border: 1px solid var(--y2k-gray);
-            border-left: 4px solid var(--y2k-green);
+            border-left: 4px solid var(--y2k-purple);
             padding: 20px;
             margin-bottom: 20px;
             border-radius: 0 10px 10px 0;
@@ -487,33 +485,6 @@
             font-size: 0.9rem;
         }
         
-        /* RESPONSIVE DESIGN */
-        @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-                gap: 20px;
-            }
-            
-            .nav-links {
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-            
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-            
-            .product-grid {
-                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-                padding: 0 15px 40px;
-            }
-            
-            .footer-content {
-                flex-direction: column;
-                gap: 30px;
-            }
-        }
-        
         /* PIXELATED LOADING ANIMATION */
         .pixel-loader {
             display: none;
@@ -543,12 +514,53 @@
         }
         
         .pixel:nth-child(2) { animation-delay: 0.2s; background-color: var(--y2k-blue); }
-        .pixel:nth-child(3) { animation-delay: 0.4s; background-color: var(--y2k-green); }
+        .pixel:nth-child(3) { animation-delay: 0.4s; background-color: var(--y2k-purple); }
         .pixel:nth-child(4) { animation-delay: 0.6s; background-color: var(--y2k-purple); }
         
         @keyframes pixelPulse {
             0%, 100% { transform: scale(1); }
             50% { transform: scale(1.5); }
+        }
+        
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .product-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                padding: 0 15px 40px;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                gap: 30px;
+            }
+            
+            /* ADJUST SKULL SYMBOL POSITION ON MOBILE */
+            .products-title::before {
+                left: 10%;  /* Move closer to text */
+            }
+            
+            .products-title::after {
+                right: 10%; /* Move closer to text */
+            }
+            
+            .products-title {
+                font-size: 2rem;
+                padding: 0 40px; /* Add padding to prevent overlap */
+            }
         }
     </style>
 </head>
